@@ -4,18 +4,14 @@ Simple Customizable Global React Loader.
 
 ## Install
 
-Install Package:
+`npm i react-global-loader`
 
-### `npm i react-global-loader`
+## Sample Usage
 
-## Usage
-
-    import { LoaderContainer, loader } from "react ";
+    import { LoaderContainer, loader } from "react-global-loader";
 
     export default function App() {
     	return (<div>
     		 <LoaderContainer />
     	</div>)
     }
-
-`
