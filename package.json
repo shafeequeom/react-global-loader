@@ -1,6 +1,6 @@
 {
   "name": "react-global-loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple Customizable Global React Loader",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -52,8 +52,8 @@
     "typescript": "^4.9.4"
   },
   "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "dependencies": {
     "@rollup/plugin-typescript": "^10.0.1"
