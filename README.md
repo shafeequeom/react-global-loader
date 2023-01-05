@@ -11,6 +11,24 @@ Simple Customizable Global React Loader.
     import { LoaderContainer, loader } from "react-global-loader";
 
     export default function App() {
+
+        const showLoader = () => {
+            loader.set();
+        };
+
+        const hideLoader = () => {
+            loader.reset();
+        };
+
+        useEffect(()=>{
+            showLoader();
+
+            setTimeout(() => {
+                hideLoader();
+            }, 3000);
+        });
+
+
     	return (<div>
     		 <LoaderContainer />
     	</div>)
@@ -22,6 +40,23 @@ Simple Customizable Global React Loader.
     import { LoaderContainer, loader } from "react-global-loader";
 
     export default function App() {
+
+        const showLoader = () => {
+            loader.set();
+        };
+
+        const hideLoader = () => {
+            loader.reset();
+        };
+
+        useEffect(()=>{
+            showLoader();
+
+            setTimeout(() => {
+                hideLoader();
+            }, 3000);
+        });
+
     	return (<div>
     		 <LoaderContainer opacity={0.5} backgroundColor="#ccc">
                 <CustomLoaderComponent/>
