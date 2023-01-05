@@ -3,6 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import external from "rollup-plugin-peer-deps-external";
 import typescript from "@rollup/plugin-typescript";
 import { terser } from "rollup-plugin-terser";
+import dts from "rollup-plugin-dts";
 
 export default [
   {
@@ -24,6 +25,14 @@ export default [
       external(),
       resolve(),
       terser(),
+    ],
+  },
+  {
+    input: "dist/types/index.d.ts",
+    output: [{ file: "dist/index.d.ts", format: "esm" }],
+    plugins: [
+      babel({ exclude: "node_modules/**", presets: ["@babel/preset-react"] }),
+      dts(),
     ],
   },
 ];

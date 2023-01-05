@@ -1,6 +1,6 @@
 {
   "name": "react-global-loader",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Simple Customizable Global React Loader",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -46,6 +46,7 @@
     "react-dom": "^18.2.0",
     "rollup": "^3.9.1",
     "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-dts": "^5.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
