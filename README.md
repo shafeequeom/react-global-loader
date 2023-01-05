@@ -8,9 +8,23 @@ Simple Customizable Global React Loader.
 
 ## Simple Usage
 
-    import { LoaderContainer, loader } from "react-global-loader";
+    // App.js
+    import { LoaderContainer } from "react-global-loader";
 
     export default function App() {
+
+    	return (
+            <div>
+    		    <LoaderContainer />
+    	    </div>
+        )
+    }
+
+    // Component/Pages
+
+    import { loader } from "react-global-loader"
+
+    export default function PageName() {
 
         const showLoader = () => {
             loader.set();
@@ -28,10 +42,7 @@ Simple Customizable Global React Loader.
             }, 3000);
         });
 
-
-    	return (<div>
-    		 <LoaderContainer />
-    	</div>)
+        return (<div>Page 1</div>)
     }
 
 ## Extended Usage
@@ -57,9 +68,24 @@ Simple Customizable Global React Loader.
             }, 3000);
         });
 
+        const Arrow = () => (
+            <div
+            style={{
+                width: 0,
+                height: 0,
+                borderTop: "10px solid transparent",
+                borderRight: "20px solid red",
+                borderBottom: "10px solid transparent",
+            }}
+            ></div>
+        );
+
     	return (<div>
     		 <LoaderContainer opacity={0.5} backgroundColor="#ccc">
-                <CustomLoaderComponent/>
+                 <div style={{ display: "inline-flex" }}>
+                    <Arrow />
+                    <div style={{ marginLeft: "10px" }}> Custom Loader</div>
+                </div>
              </LoaderContainer>
     	</div>)
     }

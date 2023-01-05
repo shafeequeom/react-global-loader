@@ -3,10 +3,14 @@ import React from "react";
 const LoaderContainer = ({
   backgroundColor = "#0000003a",
   opacity = 1,
+  justify = "center",
+  align = "center",
   children,
 }: {
   backgroundColor?: string;
   opacity?: number;
+  justify?: string;
+  align?: string;
   children?: any;
 }) => {
   return (
@@ -29,8 +33,8 @@ const LoaderContainer = ({
           width: "100%",
           height: "100%",
           display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
+          justifyContent: justify,
+          alignItems: justify,
         }}
       >
         {children ? children : "Loading.."}

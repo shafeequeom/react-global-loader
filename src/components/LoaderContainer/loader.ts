@@ -1,5 +1,5 @@
 const loader = {
-  set: () => {
+  show: () => {
     let loader: any = document.getElementById("rgl-overlay");
     if (loader) {
       loader.dataset.count = loader.dataset.count
@@ -8,7 +8,7 @@ const loader = {
       loader.style.display = "block";
     }
   },
-  reset: () => {
+  hide: () => {
     let loader: any = document.getElementById("rgl-overlay");
     if (loader) {
       loader.dataset.count = loader.dataset.count
