@@ -6,12 +6,25 @@ Simple Customizable Global React Loader.
 
 `npm i react-global-loader`
 
-## Sample Usage
+## Simple Usage
 
     import { LoaderContainer, loader } from "react-global-loader";
 
     export default function App() {
     	return (<div>
     		 <LoaderContainer />
+    	</div>)
+    }
+
+## Extended Usage
+
+    import CustomLoaderComponent from "./components"
+    import { LoaderContainer, loader } from "react-global-loader";
+
+    export default function App() {
+    	return (<div>
+    		 <LoaderContainer opacity={0.5} backgroundColor="#ccc">
+                <CustomLoaderComponent/>
+             </LoaderContainer>
     	</div>)
     }
