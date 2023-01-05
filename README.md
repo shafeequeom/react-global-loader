@@ -10,14 +10,12 @@ Install Package:
 
 ## Usage
 
-`
-import { LoaderContainer, loader } from "react ";
+    import { LoaderContainer, loader } from "react ";
 
-export default function App() {
-return (<div>
-<LoaderContainer />
-</div>)
-
-}
+    export default function App() {
+    	return (<div>
+    		 <LoaderContainer />
+    	</div>)
+    }
 
 `
