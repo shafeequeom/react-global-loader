@@ -1,6 +1,6 @@
 {
   "name": "react-global-loader",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Simple Customizable Global React Loader",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

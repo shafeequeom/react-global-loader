@@ -8,7 +8,8 @@ Simple Customizable Global React Loader.
 
 ## Simple Usage
 
-    // App.js
+#### Import LoaderContainer in App.js or root js
+
     import { LoaderContainer } from "react-global-loader";
 
     export default function App() {
@@ -20,7 +21,7 @@ Simple Customizable Global React Loader.
         )
     }
 
-    // Component/Pages
+#### Usage inside pages, components and services
 
     import { loader } from "react-global-loader"
 
@@ -89,3 +90,12 @@ Simple Customizable Global React Loader.
              </LoaderContainer>
     	</div>)
     }
+
+## Container Properties
+
+| Property        | Default Value | Type   |
+| --------------- | ------------- | ------ |
+| opacity         | 1             | number |
+| backgroundColor | #0000003a     | string |
+| justify         | center        | string |
+| justify         | center        | string |
