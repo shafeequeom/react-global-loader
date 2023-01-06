@@ -27,11 +27,11 @@ Simple Customizable Global React Loader.
     export default function PageName() {
 
         const showLoader = () => {
-            loader.set();
+            loader.show();
         };
 
         const hideLoader = () => {
-            loader.reset();
+            loader.hide();
         };
 
         useEffect(()=>{
@@ -53,11 +53,11 @@ Simple Customizable Global React Loader.
     export default function App() {
 
         const showLoader = () => {
-            loader.set();
+            loader.show();
         };
 
         const hideLoader = () => {
-            loader.reset();
+            loader.hide();
         };
 
         useEffect(()=>{

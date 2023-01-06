@@ -1,5 +1,5 @@
 declare const loader: {
-    set: () => void;
-    reset: () => void;
+    show: () => void;
+    hide: () => void;
 };
 export default loader;
