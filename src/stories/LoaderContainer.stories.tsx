@@ -3,6 +3,8 @@ import { storiesOf } from "@storybook/react";
 
 import { LoaderContainer, loader } from "../components/LoaderContainer";
 
+import { Audio } from "react-loader-spinner";
+
 const stories = storiesOf("Loader Test", module);
 
 stories.add("Loader", () => {
@@ -40,6 +42,28 @@ stories.add("Custom", () => {
         <Arrow />
         <div style={{ marginLeft: "10px" }}> Custom Loader</div>
       </div>
+    </LoaderContainer>
+  );
+});
+
+stories.add("LoaderSpinner", () => {
+  useEffect(() => {
+    loader.show();
+    setTimeout(() => {
+      loader.hide();
+    }, 5000);
+  });
+  return (
+    <LoaderContainer>
+      <Audio
+        height="100"
+        width="100"
+        color="#4fa94d"
+        ariaLabel="audio-loading"
+        wrapperStyle={{}}
+        wrapperClass="wrapper-class"
+        visible={true}
+      />
     </LoaderContainer>
   );
 });

@@ -10,86 +10,119 @@ Simple Customizable Global React Loader.
 
 #### Import LoaderContainer in App.js or root js
 
-    import { LoaderContainer } from "react-global-loader";
+```js
+import { LoaderContainer } from "react-global-loader";
 
-    export default function App() {
-
-    	return (
-            <div>
-    		    <LoaderContainer />
-    	    </div>
-        )
-    }
+export default function App() {
+  return (
+    <div>
+      <LoaderContainer />
+    </div>
+  );
+}
+```
 
 #### Usage inside pages, components and services
 
-    import { loader } from "react-global-loader"
+```js
+import { loader } from "react-global-loader";
 
-    export default function PageName() {
+export default function PageName() {
+  const showLoader = () => {
+    loader.show();
+  };
 
-        const showLoader = () => {
-            loader.show();
-        };
+  const hideLoader = () => {
+    loader.hide();
+  };
 
-        const hideLoader = () => {
-            loader.hide();
-        };
+  useEffect(() => {
+    showLoader();
 
-        useEffect(()=>{
-            showLoader();
+    setTimeout(() => {
+      hideLoader();
+    }, 3000);
+  });
 
-            setTimeout(() => {
-                hideLoader();
-            }, 3000);
-        });
-
-        return (<div>Page 1</div>)
-    }
+  return <div>Page 1</div>;
+}
+```
 
 ## Extended Usage
 
-    import CustomLoaderComponent from "./components"
-    import { LoaderContainer, loader } from "react-global-loader";
+```js
+import { LoaderContainer, loader } from "react-global-loader";
 
-    export default function App() {
+export default function App() {
+  const showLoader = () => {
+    loader.show();
+  };
 
-        const showLoader = () => {
-            loader.show();
-        };
+  const hideLoader = () => {
+    loader.hide();
+  };
 
-        const hideLoader = () => {
-            loader.hide();
-        };
+  useEffect(() => {
+    showLoader();
 
-        useEffect(()=>{
-            showLoader();
+    setTimeout(() => {
+      hideLoader();
+    }, 3000);
+  });
 
-            setTimeout(() => {
-                hideLoader();
-            }, 3000);
-        });
+  const Arrow = () => (
+    <div
+      style={{
+        width: 0,
+        height: 0,
+        borderTop: "10px solid transparent",
+        borderRight: "20px solid red",
+        borderBottom: "10px solid transparent",
+      }}
+    ></div>
+  );
 
-        const Arrow = () => (
-            <div
-            style={{
-                width: 0,
-                height: 0,
-                borderTop: "10px solid transparent",
-                borderRight: "20px solid red",
-                borderBottom: "10px solid transparent",
-            }}
-            ></div>
-        );
+  return (
+    <div>
+      <LoaderContainer opacity={0.5} backgroundColor="#ccc">
+        <div style={{ display: "inline-flex" }}>
+          <Arrow />
+          <div style={{ marginLeft: "10px" }}> Custom Loader</div>
+        </div>
+      </LoaderContainer>
+    </div>
+  );
+}
+```
 
-    	return (<div>
-    		 <LoaderContainer opacity={0.5} backgroundColor="#ccc">
-                 <div style={{ display: "inline-flex" }}>
-                    <Arrow />
-                    <div style={{ marginLeft: "10px" }}> Custom Loader</div>
-                </div>
-             </LoaderContainer>
-    	</div>)
-    }
+## Using with react-loader-spinner Usage
+
+```js
+import { Audio } from "react-loader-spinner";
+import { LoaderContainer, loader } from "react-global-loader";
+
+export default function App() {
+  useEffect(() => {
+    loader.show();
+    setTimeout(() => {
+      loader.hide();
+    }, 5000);
+  });
+  return (
+    <LoaderContainer>
+      <Audio
+        height="100"
+        width="100"
+        color="#4fa94d"
+        ariaLabel="audio-loading"
+        wrapperStyle={{}}
+        wrapperClass="wrapper-class"
+        visible={true}
+      />
+    </LoaderContainer>
+  );
+}
+```
 
 ## Container Properties
 
@@ -99,3 +132,8 @@ Simple Customizable Global React Loader.
 | backgroundColor | #0000003a     | string |
 | justify         | center        | string |
 | justify         | center        | string |
+| defaultText     | Loading..     | string |
+
+```
+
+```

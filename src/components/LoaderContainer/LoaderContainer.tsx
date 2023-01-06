@@ -5,12 +5,14 @@ const LoaderContainer = ({
   opacity = 1,
   justify = "center",
   align = "center",
+  defaultText = "Loading..",
   children,
 }: {
   backgroundColor?: string;
   opacity?: number;
   justify?: string;
   align?: string;
+  defaultText?: string;
   children?: any;
 }) => {
   return (
@@ -37,7 +39,7 @@ const LoaderContainer = ({
           alignItems: justify,
         }}
       >
-        {children ? children : "Loading.."}
+        {children ? children : defaultText}
       </div>
     </div>
   );
