@@ -4,7 +4,9 @@ Simple Customizable Global React Loader.
 
 ## Install
 
-`npm i react-global-loader`
+```js
+npm i react-global-loader
+```
 
 ## Simple Usage
 
