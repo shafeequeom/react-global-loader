@@ -97,6 +97,8 @@ export default function App() {
 
 ## Using with react-loader-spinner Usage
 
+If you are familiar with react-loader spinner please do check out the [official page](https://mhnpd.github.io/react-loader-spinner/) and [npm page](https://www.npmjs.com/package/react-loader-spinner) .
+
 ```js
 import { Audio } from "react-loader-spinner";
 import { LoaderContainer, loader } from "react-global-loader";
