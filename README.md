@@ -97,7 +97,7 @@ export default function App() {
 }
 ```
 
-## Using with react-loader-spinner Usage
+## Using with react-loader-spinner
 
 If you are familiar with react-loader spinner please do check out the [official page](https://mhnpd.github.io/react-loader-spinner/) and [npm page](https://www.npmjs.com/package/react-loader-spinner) .
 
@@ -135,7 +135,7 @@ export default function App() {
 | opacity         | 1             | number |
 | backgroundColor | #0000003a     | string |
 | justify         | center        | string |
-| justify         | center        | string |
+| align           | center        | string |
 | defaultText     | Loading..     | string |
 
 ```
