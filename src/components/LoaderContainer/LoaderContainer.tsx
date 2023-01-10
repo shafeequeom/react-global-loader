@@ -7,6 +7,9 @@ const LoaderContainer = ({
   align = "center",
   defaultText = "Loading..",
   defaultShow = false,
+  id = "rgl-overlay",
+  autoHide = false,
+  hideDuration = 3000,
   children,
 }: {
   backgroundColor?: string;
@@ -15,11 +18,16 @@ const LoaderContainer = ({
   align?: string;
   defaultText?: string;
   defaultShow?: boolean;
+  id?: string;
+  autoHide?: boolean;
+  hideDuration?: number;
   children?: any;
 }) => {
   return (
     <div
-      id="rgl-overlay"
+      id={id}
+      data-auto={autoHide}
+      data-duration={hideDuration}
       style={{
         position: "fixed",
         top: 0,

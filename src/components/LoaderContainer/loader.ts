@@ -1,15 +1,20 @@
 const loader = {
-  show: () => {
-    let loader: any = document.getElementById("rgl-overlay");
+  show: ({ id = "rgl-overlay" }: { id?: string } = {}) => {
+    let loader: any = document.getElementById(id);
     if (loader) {
       loader.dataset.count = loader.dataset.count
         ? parseInt(loader.dataset.count) + 1
         : 1;
       loader.style.display = "block";
+      if (loader.dataset.auto == "true") {
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, parseInt(loader.dataset.duration || 3000));
+      }
     }
   },
-  hide: () => {
-    let loader: any = document.getElementById("rgl-overlay");
+  hide: ({ id = "rgl-overlay" }: { id?: string } = {}) => {
+    let loader: any = document.getElementById(id);
     if (loader) {
       loader.dataset.count = loader.dataset.count
         ? parseInt(loader.dataset.count) - 1

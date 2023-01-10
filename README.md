@@ -130,11 +130,20 @@ export default function App() {
 
 ## Container Properties
 
-| Property        | Default Value | Type    |
-| --------------- | ------------- | ------- |
-| opacity         | 1             | number  |
-| backgroundColor | #0000003a     | string  |
-| justify         | center        | string  |
-| align           | center        | string  |
-| defaultText     | Loading..     | string  |
-| defaultShow     | false         | boolean |
+| Property        | Default Value | Type    | Description                                                              |
+| --------------- | ------------- | ------- | ------------------------------------------------------------------------ |
+| opacity         | 1             | number  | Set Opacity level for overlay background                                 |
+| backgroundColor | #0000003a     | string  | Set background color for overlay                                         |
+| justify         | center        | string  | Horizontal alignment of loader content (flex)                            |
+| align           | center        | string  | Horizontal alignment of loader content (flex)                            |
+| defaultText     | Loading..     | string  | Default text for loader                                                  |
+| defaultShow     | false         | boolean | Set to true if you want to show by default                               |
+| id              | rgl-overlay   | string  | HTML id value, if you want to have multiple type of loaders              |
+| autoHide        | false         | boolean | If you want to automatically hide the loader after a certain time period |
+| hideDuration    | 3000          | number  | Increase or decrease the value if autoHide is enabled                    |
+
+## Loader Properties
+
+| Property | Default Value | Type   | Description                                           |
+| -------- | ------------- | ------ | ----------------------------------------------------- |
+| id       | rgl-overlay   | string | Pass Id if multiple loader are there to hide and show |

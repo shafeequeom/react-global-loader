@@ -17,6 +17,13 @@ stories.add("Loader", () => {
   return <LoaderContainer />;
 });
 
+stories.add("AutoHide", () => {
+  useEffect(() => {
+    loader.show();
+  });
+  return <LoaderContainer autoHide={true} />;
+});
+
 stories.add("Custom", () => {
   useEffect(() => {
     loader.show();
