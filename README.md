@@ -130,14 +130,11 @@ export default function App() {
 
 ## Container Properties
 
-| Property        | Default Value | Type   |
-| --------------- | ------------- | ------ |
-| opacity         | 1             | number |
-| backgroundColor | #0000003a     | string |
-| justify         | center        | string |
-| align           | center        | string |
-| defaultText     | Loading..     | string |
-
-```
-
-```
+| Property        | Default Value | Type    |
+| --------------- | ------------- | ------- |
+| opacity         | 1             | number  |
+| backgroundColor | #0000003a     | string  |
+| justify         | center        | string  |
+| align           | center        | string  |
+| defaultText     | Loading..     | string  |
+| defaultShow     | false         | boolean |

@@ -6,6 +6,7 @@ const LoaderContainer = ({
   justify = "center",
   align = "center",
   defaultText = "Loading..",
+  defaultShow = false,
   children,
 }: {
   backgroundColor?: string;
@@ -13,6 +14,7 @@ const LoaderContainer = ({
   justify?: string;
   align?: string;
   defaultText?: string;
+  defaultShow?: boolean;
   children?: any;
 }) => {
   return (
@@ -28,6 +30,7 @@ const LoaderContainer = ({
         opacity: opacity,
         background: backgroundColor,
         transition: "opacity 0.2s ease",
+        display: defaultShow ? "block" : "none",
       }}
     >
       <div
