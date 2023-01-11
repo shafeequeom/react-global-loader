@@ -44,7 +44,7 @@ stories.add("Custom", () => {
     ></div>
   );
   return (
-    <LoaderContainer>
+    <LoaderContainer backgroundColor="red" opacity={0.2}>
       <div style={{ display: "inline-flex" }}>
         <Arrow />
         <div style={{ marginLeft: "10px" }}> Custom Loader</div>

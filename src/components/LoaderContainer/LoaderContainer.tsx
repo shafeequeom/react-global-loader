@@ -24,35 +24,47 @@ const LoaderContainer = ({
   children?: any;
 }) => {
   return (
-    <div
-      id={id}
-      data-auto={autoHide}
-      data-duration={hideDuration}
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: 1000,
-        opacity: opacity,
-        background: backgroundColor,
-        transition: "opacity 0.2s ease",
-        display: defaultShow ? "block" : "none",
-      }}
-    >
+    <>
       <div
+        id={id}
+        data-auto={autoHide}
+        data-duration={hideDuration}
         style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
           width: "100%",
           height: "100%",
-          display: "flex",
-          justifyContent: justify,
-          alignItems: justify,
+          zIndex: 1000,
+          opacity: opacity,
+          background: backgroundColor,
+          transition: "opacity 0.2s ease",
+          display: defaultShow ? "block" : "none",
+        }}
+      ></div>
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 10001,
         }}
       >
-        {children ? children : defaultText}
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: justify,
+            alignItems: justify,
+          }}
+        >
+          {children ? children : defaultText}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

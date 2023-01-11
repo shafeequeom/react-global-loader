@@ -1,5 +1,9 @@
 declare const loader: {
-    show: () => void;
-    hide: () => void;
+    show: ({ id }?: {
+        id?: string | undefined;
+    }) => void;
+    hide: ({ id }?: {
+        id?: string | undefined;
+    }) => void;
 };
 export default loader;
