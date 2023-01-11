@@ -1,6 +1,6 @@
 # React Global Loader
 
-Simple Customizable Global React Loader.
+Simple Customizable Global React Loader. [Demo page](https://shafeequeom.github.io/react-global-loader-demo/)
 
 ## Install
 
