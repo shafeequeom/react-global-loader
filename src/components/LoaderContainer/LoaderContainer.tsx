@@ -24,11 +24,14 @@ const LoaderContainer = ({
   children?: any;
 }) => {
   return (
-    <>
+    <div
+      id={id}
+      data-auto={autoHide}
+      data-duration={hideDuration}
+      style={{ display: defaultShow ? "block" : "none" }}
+    >
       <div
-        id={id}
-        data-auto={autoHide}
-        data-duration={hideDuration}
+        id={`${id}-bg`}
         style={{
           position: "fixed",
           top: 0,
@@ -39,10 +42,10 @@ const LoaderContainer = ({
           opacity: opacity,
           background: backgroundColor,
           transition: "opacity 0.2s ease",
-          display: defaultShow ? "block" : "none",
         }}
       ></div>
       <div
+        id={`${id}-container`}
         style={{
           position: "absolute",
           top: 0,
@@ -64,7 +67,7 @@ const LoaderContainer = ({
           {children ? children : defaultText}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

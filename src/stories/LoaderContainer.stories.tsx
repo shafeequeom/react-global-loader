@@ -27,9 +27,6 @@ stories.add("AutoHide", () => {
 stories.add("Custom", () => {
   useEffect(() => {
     loader.show();
-    setTimeout(() => {
-      loader.hide();
-    }, 5000);
   });
 
   const Arrow = () => (
@@ -47,7 +44,11 @@ stories.add("Custom", () => {
     <LoaderContainer backgroundColor="red" opacity={0.2}>
       <div style={{ display: "inline-flex" }}>
         <Arrow />
-        <div style={{ marginLeft: "10px" }}> Custom Loader</div>
+        <div style={{ marginLeft: "10px" }}>
+          {" "}
+          Custom Loader{" "}
+          <span onClick={() => loader.hide()}>(Click to close)</span>
+        </div>
       </div>
     </LoaderContainer>
   );
