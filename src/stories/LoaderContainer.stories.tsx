@@ -4,6 +4,8 @@ import { storiesOf } from "@storybook/react";
 import { LoaderContainer, loader } from "../components/LoaderContainer";
 
 import { Audio } from "react-loader-spinner";
+import { DefaultSpinner } from "./../components/DefaultSpinner";
+import FidgetLoader from "./loader.gif";
 
 const stories = storiesOf("Loader Test", module);
 
@@ -72,6 +74,31 @@ stories.add("LoaderSpinner", () => {
         wrapperClass="wrapper-class"
         visible={true}
       />
+    </LoaderContainer>
+  );
+});
+
+stories.add("DefaultSpinner", () => {
+  useEffect(() => {
+    loader.show();
+  });
+  return (
+    <LoaderContainer>
+      <DefaultSpinner />
+    </LoaderContainer>
+  );
+});
+
+stories.add("ImageSpinner", () => {
+  useEffect(() => {
+    loader.show();
+    setTimeout(() => {
+      loader.hide();
+    }, 5000);
+  });
+  return (
+    <LoaderContainer>
+      <img src={FidgetLoader} alt="loading" />
     </LoaderContainer>
   );
 });

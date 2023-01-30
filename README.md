@@ -24,6 +24,39 @@ export default function App() {
 }
 ```
 
+#### Or LoaderContainer with default spinner component
+
+```js
+import { LoaderContainer, DefaultSpinner } from "react-global-loader";
+
+export default function App() {
+  return (
+    <div>
+      <LoaderContainer>
+        <DefaultSpinner />
+      </LoaderContainer>
+    </div>
+  );
+}
+```
+
+#### Or LoaderContainer with a image file
+
+```js
+import { LoaderContainer } from "react-global-loader";
+import FidgetLoader from "./loader.gif";
+
+export default function App() {
+  return (
+    <div>
+      <LoaderContainer>
+        <img src={FidgetLoader} alt="loading" />
+      </LoaderContainer>
+    </div>
+  );
+}
+```
+
 #### Usage inside pages, components and services
 
 ```js

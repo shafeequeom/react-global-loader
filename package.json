@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/shafeequeom/react-global-loader/issues"
   },
-  "homepage": "https://github.com/shafeequeom/react-global-loader#readme",
+  "homepage": "https://shafeequeom.github.io/react-global-loader-demo/",
   "devDependencies": {
     "@babel/core": "^7.20.7",
     "@babel/preset-react": "^7.18.6",
