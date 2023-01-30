@@ -21,4 +21,6 @@ declare const loader: {
     }) => void;
 };
 
-export { LoaderContainer, loader };
+declare const DefaultSpinner: () => JSX.Element;
+
+export { DefaultSpinner, LoaderContainer, loader };

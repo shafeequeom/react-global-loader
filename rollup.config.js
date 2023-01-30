@@ -4,6 +4,7 @@ import external from "rollup-plugin-peer-deps-external";
 import typescript from "@rollup/plugin-typescript";
 import { terser } from "rollup-plugin-terser";
 import dts from "rollup-plugin-dts";
+import postcss from "rollup-plugin-postcss";
 
 export default [
   {
@@ -25,11 +26,16 @@ export default [
       external(),
       resolve(),
       terser(),
+      postcss({
+        plugins: [],
+        minimize: true,
+      }),
     ],
   },
   {
     input: "dist/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
+    external: [/\.css$/],
     plugins: [
       babel({ exclude: "node_modules/**", presets: ["@babel/preset-react"] }),
       dts(),
